@@ -1,10 +1,10 @@
 image: Ubuntu1804
 
-stack: node 10
+stack: node 16
 
 branches:
   only:
-    - master
+    - main
 
 cache: node_modules
 
