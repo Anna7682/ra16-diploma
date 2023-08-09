@@ -16,26 +16,19 @@ import Cart from './components/Cart/Cart';
 export const appURL = '/ra16-diploma';
 export const serverURL = 'https://ra16-dplm-bcknd.herokuapp.com/api/';
 
-function App(): ReactElement {
+function App() {
   return (
-    <Router basename={appURL}>
-      <div className="wrapper>">
-        <Header />
-        <Main>
-          <Banner />
-          <Switch>
-            <Route exact path="/" component={MainPage} />
-            <Route path="/about.html" exact component={About} />
-            <Route path="/contacts.html" exact component={Contacts} />
-            <Route path="/catalog.html" exact component={Catalog} />
-            <Route path="/items/:id.html" exact component={ProductCard} />
-            <Route path="/cart.html" exact component={Cart} />
-            <Route path="*" component={Error404} /> CartIcon
-          </Switch>
-        </Main>
-        <Footer />
-      </div>
-    </Router>
+    <Routes>
+      <Route path={Paths.HOME} element={<Layout />}>
+        <Route index element={<HomePage />} />
+        <Route path={Paths.ABOUT} element={<About />} />
+        <Route path={Paths.CONTACTS} element={<ContactsInfo />} />
+        <Route path={Paths.CATALOG} element={<CatalogSearch />} />
+        <Route path={`${Paths.CATALOG}:id`} element={<CatalogItem />} />
+        <Route path={Paths.CART} element={<Cart />} />
+        <Route path='*' element={<Error404 />} />
+      </Route>
+    </Routes>
   );
 }
 
