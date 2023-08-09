@@ -14,7 +14,7 @@ import ProductCard from './components/ProductCard/ProductCard';
 import Cart from './components/Cart/Cart';
 
 export const appURL = '/ra16-diploma';
-export const serverURL = 'https://ra16-dplm-bcknd.herokuapp.com/api/';
+export const serverURL = 'https://ra16-diploma-backend-hk4y.onrender.com';
 
 function App() {
   return (
