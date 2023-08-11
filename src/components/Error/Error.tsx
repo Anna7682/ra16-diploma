@@ -1,6 +1,6 @@
 import './Error.scss';
 import { SerializedError } from '@reduxjs/toolkit';
-import { useAppDispatch } from '../../hooks/hooks';
+import { useAppDispatch } from '../hooks/hooks';
 
 type TPropsError = {
   error: SerializedError,
