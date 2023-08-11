@@ -1,10 +1,10 @@
 import { Category } from "./Category/Category";
-import { ICategory } from '../../../../slices/catalogSlice/interfaces';
-import { useAppSelector } from "../../../../hooks/hooks";
-import { selectCategoriesError, selectCategoriesLoading } from "../../../../slices/categorySlice/categorySlice";
-import { Error } from "../../../Error/Error";
+import { ICategory } from '../slices/catalogSlice/interfaces';
+import { useAppSelector } from "../hooks/hooks";
+import { selectCategoriesError, selectCategoriesLoading } from "../slices/categorySlice/categorySlice";
+import { Error } from "../../Error/Error";
 import { nanoid } from 'nanoid'
-import { fetchCategories } from "../../../../slices/asyncThunkCreator";
+import { fetchCategories } from "../slices/asyncThunkCreator";
 
 type TProps = { categories: ICategory[] }
 
