@@ -2,14 +2,14 @@ import { useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import error_img from '../../../img/no_image.png';
 import { nanoid } from 'nanoid';
-import { useAppDispatch, useAppSelector } from '../hooks/hooks';
-import { fetchProduct } from '../slices/asyncThunkCreator';
-import { increment, decrement, setTheSize, resetSize } from '../slices/productPageSlice/productPageSlice';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
+import { fetchProduct } from '../../slices/asyncThunkCreator';
+import { increment, decrement, setTheSize, resetSize } from '../../slices/productPageSlice/productPageSlice';
 import { Error } from '../../Error/Error';
 import { Preloader } from '../../Main/Preloader/Preloader';
-import { Paths } from '../Paths';
-import { ICartItem } from '../slices/cartSlice/interfaces';
-import { addProductToCart, updateCart } from '../slices/cartSlice/cartSlice';
+import { Paths } from '../../Paths';
+import { ICartItem } from '../../slices/cartSlice/interfaces';
+import { addProductToCart, updateCart } from '../../slices/cartSlice/cartSlice';
 import {
   selectAvalible,
   selectProduct,
