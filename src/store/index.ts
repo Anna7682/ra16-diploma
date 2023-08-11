@@ -1,12 +1,12 @@
 import { configureStore, Middleware } from '@reduxjs/toolkit';
-import { topSalesReducer } from '/slices/topSalesSlice/topSalesSlice';
-import { catalogItemsReducer } from '/slices/catalogSlice/catalogSlice';
-import { categoryReducer } from '/slices/categorySlice/categorySlice'
-import { iconSearchReducer } from '/slices/iconSearchSlice/iconSearchSlice';
-import { productPageReducer } from '/slices/productPageSlice/productPageSlice';
-import { cartReducer } from '/slices/cartSlice/cartSlice';
-import { orderReducer } from '/slices/orderSlice/orderSlice';
-import { ICartState } from '/slices/cartSlice/interfaces';
+import { topSalesReducer } from '../slices/topSalesSlice/topSalesSlice';
+import { catalogItemsReducer } from '../slices/catalogSlice/catalogSlice';
+import { categoryReducer } from '../slices/categorySlice/categorySlice'
+import { iconSearchReducer } from '../slices/iconSearchSlice/iconSearchSlice';
+import { productPageReducer } from '../slices/productPageSlice/productPageSlice';
+import { cartReducer } from '../slices/cartSlice/cartSlice';
+import { orderReducer } from '../slices/orderSlice/orderSlice';
+import { ICartState } from '../slices/cartSlice/interfaces';
 
 export const storageMiddleware: Middleware = (store) => (next) => (action) => {
   if (action.type === 'cart/updateCart') {
