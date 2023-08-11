@@ -10,16 +10,16 @@ import {
   selectCategoriesSelected,
   selectCategories,
   selectCategoriesLoading
-} from '../../../slices/categorySlice/categorySlice';
+} from '../../slices/categorySlice/categorySlice';
 import {
   selectCatalogError,
   selectCatalogItems,
   selectCatalogLoading,
   selectCatalogSearch
-} from '../../../slices/catalogSlice/catalogSlice';
-import { useAppDispatch, useAppSelector } from '../../../hooks/hooks';
-import { fetchCatalogItems, fetchCategories } from '../../../slices/asyncThunkCreator'
-import { ICardItem } from '../../../slices/topSalesSlice/interfaces';
+} from '../../slices/catalogSlice/catalogSlice';
+import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
+import { fetchCatalogItems, fetchCategories } from '../../slices/asyncThunkCreator'
+import { ICardItem } from '../../slices/topSalesSlice/interfaces';
 
 export function Catalog({ children }: { children: ReactNode }): JSX.Element {
   const items = useAppSelector(selectCatalogItems);
