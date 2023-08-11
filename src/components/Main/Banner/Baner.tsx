@@ -1,4 +1,4 @@
-import banner from '../../../../img/banner.jpg';
+import banner from '../../img/banner.jpg';
 import './Banner.scss';
 
 export function Banner(): JSX.Element {
