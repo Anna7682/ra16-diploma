@@ -17,7 +17,8 @@ import {
   selectProductLoading,
   selectQuantity,
   selectSelectedSize
-} from '../slices/productPageSlice/productPageSlice';
+} from '../../../slices/productPageSlice/productPageSlice';
+
 
 export function CatalogItem(): JSX.Element {
   const { id } = useParams() as any;
