@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { Paths } from '../Paths'
+import { Paths } from '../../../Paths'
 
 export function Information(): JSX.Element {
   return (
