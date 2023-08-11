@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
-import { Paths } from '../../../Paths';
-import error_img from '../../../../img/no_image.png';
+import { Paths } from '../Paths';
+import error_img from '../../img/no_image.png';
 import './Card.scss';
 import React from 'react';
 
