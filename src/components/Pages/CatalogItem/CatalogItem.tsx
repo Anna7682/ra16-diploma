@@ -7,7 +7,7 @@ import { fetchProduct } from '../../slices/asyncThunkCreator';
 import { increment, decrement, setTheSize, resetSize } from '../../slices/productPageSlice/productPageSlice';
 import { Error } from '../../Error/Error';
 import { Preloader } from '../../Main/Preloader/Preloader';
-import { Paths } from '../../Paths';
+import { Paths } from '../../../Paths';
 import { ICartItem } from '../../slices/cartSlice/interfaces';
 import { addProductToCart, updateCart } from '../../slices/cartSlice/cartSlice';
 import {
