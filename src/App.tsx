@@ -1,13 +1,13 @@
 import { Routes, Route } from 'react-router-dom';
-import { Paths } from './ts/Paths';
-import { Layout } from './ts/components/Layout/Layout';
-import { HomePage } from './ts/components/Pages/HomePage/HomePage';
-import { About } from './ts/components/Pages/About/About';
-import { ContactsInfo } from './ts/components/Pages/ContactsInfo/ContactsInfo';
-import { CatalogSearch } from './ts/components/Pages/CatalogSearch/CatalogSearch';
-import { Error404 } from './ts/components/Pages/Error404/Error404';
-import { CatalogItem } from './ts/components/Pages/CatalogItem/CatalogItem';
-import { Cart } from './ts/components/Main/Cart/Cart';
+import { Paths } from './Paths';
+import { Layout } from './components/Layout/Layout';
+import { HomePage } from './components/Pages/HomePage/HomePage';
+import { About } from './components/Pages/About/About';
+import { ContactsInfo } from './components/Pages/ContactsInfo/ContactsInfo';
+import { CatalogSearch } from './components/Pages/CatalogSearch/CatalogSearch';
+import { Error404 } from './components/Pages/Error404/Error404';
+import { CatalogItem } from './components/Pages/CatalogItem/CatalogItem';
+import { Cart } from './components/Main/Cart/Cart';
 
 export const appURL = '/ra16-diploma';
 export const serverURL = 'https://ra16-diploma-backend-hk4y.onrender.com';
