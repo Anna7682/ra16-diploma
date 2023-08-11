@@ -1,24 +1,34 @@
-// Core
 import { configureStore, Middleware } from '@reduxjs/toolkit';
-import thunk from 'redux-thunk';
-// RootReducer
-import { rootReducer } from '../reducers';
+import { topSalesReducer } from '../slices/topSalesSlice/topSalesSlice';
+import { catalogItemsReducer } from '../slices/catalogSlice/catalogSlice';
+import { categoryReducer } from '../slices/categorySlice/categorySlice'
+import { iconSearchReducer } from '../slices/iconSearchSlice/iconSearchSlice';
+import { productPageReducer } from '../slices/productPageSlice/productPageSlice';
+import { cartReducer } from '../slices/cartSlice/cartSlice';
+import { orderReducer } from '../slices/orderSlice/orderSlice';
+import { ICartState } from '../slices/cartSlice/interfaces';
 
-const Logger: Middleware = (store) => (next) => (action) => {
-  // eslint-disable-next-line no-console
-  console.log('dispatching', action);
-  // eslint-disable-next-line no-console
-  console.log('prev_state', store.getState());
-  const result = next(action);
-  // eslint-disable-next-line no-console
-  console.log('next_state', store.getState());
-  return result;
-};
+export const storageMiddleware: Middleware = (store) => (next) => (action) => {
+  if (action.type === 'cart/updateCart') {
+    const cartState = store.getState().cart as ICartState;
+    const items = cartState.items;
+    localStorage.setItem('cart', JSON.stringify({items}))
+  }
+  return next(action);
+}
 
-const store = configureStore({
-  reducer: rootReducer,
-  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(thunk, Logger),
+export const store = configureStore({
+  reducer: {
+    topSales: topSalesReducer,
+    catalogItems: catalogItemsReducer,
+    categories: categoryReducer,
+    iconSearch: iconSearchReducer,
+    product: productPageReducer,
+    cart: cartReducer,
+    order: orderReducer,
+  },
+  middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(storageMiddleware)
 });
 
-export type RootState = ReturnType<typeof store.getState>;
-export default store;
+export type TAppDispatch = typeof store.dispatch;
+export type TRootState = ReturnType<typeof store.getState>;
