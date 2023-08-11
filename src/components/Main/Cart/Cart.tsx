@@ -1,4 +1,4 @@
-import { useAppDispatch, useAppSelector } from "../hooks/hooks";
+import { useAppDispatch, useAppSelector } from "../../../hooks/hooks";
 import {
   selectCartItems,
   updateCart,
@@ -8,14 +8,14 @@ import {
   selectOrderError, resetOrder
 } from "../../../slices/cartSlice/cartSlice"
 import { Link } from "react-router-dom";
-import { Paths } from "../Paths";
+import { Paths } from "../../../Paths";
 import { nanoid } from "nanoid";
-import { ICartItem } from "../slices/cartSlice/interfaces";
+import { ICartItem } from "../../../slices/cartSlice/interfaces";
 import { FormEvent, ChangeEvent } from 'react';
-import { addressSelector, resetOrderForm, telephoneSelector } from "../slices/orderSlice/orderSlice";
-import { changeFiels } from '../slices/orderSlice/orderSlice';
-import { TTelephoneNum } from "../slices/orderSlice/interfaces";
-import { fetchOrder } from '../slices/asyncThunkCreator';
+import { addressSelector, resetOrderForm, telephoneSelector } from "../../../slices/orderSlice/orderSlice";
+import { changeFiels } from '../../../slices/orderSlice/orderSlice';
+import { TTelephoneNum } from "../../../slices/orderSlice/interfaces";
+import { fetchOrder } from '../../../slices/asyncThunkCreator';
 import { Preloader } from "../Preloader/Preloader";
 
 export function Cart(): JSX.Element {
