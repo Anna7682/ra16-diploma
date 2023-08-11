@@ -2,15 +2,15 @@ import './TopSales.scss';
 import { Preloader } from '../Preloader/Preloader';
 import { Card } from '../Card/Card';
 import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../../hooks/hooks';
+import { useAppDispatch, useAppSelector } from '../../../hooks/hooks';
 import {
   selectTopSalesError,
   selectTopSalesLoading,
   selectTopSales
-} from '../slices/topSalesSlice/topSalesSlice';
-import { fetchTopSales } from '../slices/asyncThunkCreator';
+} from '../../../slices/topSalesSlice/topSalesSlice';
+import { fetchTopSales } from '../../../slices/asyncThunkCreator';
 import { Error } from '../../Error/Error';
-import { ICardItem } from '../slices/topSalesSlice/interfaces';
+import { ICardItem } from '../../../slices/topSalesSlice/interfaces';
 
 export function TopSales(): JSX.Element {
   const dispatch = useAppDispatch();
