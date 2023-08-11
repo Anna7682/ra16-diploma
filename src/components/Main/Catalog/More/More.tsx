@@ -1,8 +1,8 @@
-import { useAppDispatch, useAppSelector } from '../../../../hooks/hooks';
-import { fetchMoreItems } from '../../../../slices/asyncThunkCreator';
+import { useAppDispatch, useAppSelector } from '../hooks/hooks';
+import { fetchMoreItems } from '../slices/asyncThunkCreator';
 import { selectCatalogError, selectCatalogItems, selectCatalogLoading, selectCatalogSearch, selectMoreError, selectMoreLoading, selectMoreVisible } from '../../../../slices/catalogSlice/catalogSlice';
-import { selectCategoriesSelected } from '../../../../slices/categorySlice/categorySlice';
-import { Error } from '../../../Error/Error';
+import { selectCategoriesSelected } from '../slices/categorySlice/categorySlice';
+import { Error } from '../../Error/Error';
 import { Preloader } from '../../Preloader/Preloader';
 
 export function More(): JSX.Element {
