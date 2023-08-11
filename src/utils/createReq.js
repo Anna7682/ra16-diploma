@@ -1,5 +1,5 @@
 export default async function createReq({ query, method, content, id }) {
-  const baseURL = 'https://redux-thunk-server.herokuapp.com/api/test/';
+  const baseURL = 'https://ra16-diploma-backend-hk4y.onrender.com';
   // const baseURL = 'http://localhost:7777/';
   const requestURL = method === 'DELETE' ? `${baseURL + query}${id}` : baseURL + query;
 
