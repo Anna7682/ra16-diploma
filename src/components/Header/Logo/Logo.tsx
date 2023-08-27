@@ -1,4 +1,10 @@
-
+html,
+body {
+  font-family: open Sans, arial, sans-serif;
+  font-size: 1vw;
+  height: 100%;
+  background-color: lightgray;
+}
 .visually-hidden {
   width: 1px;
   height: 1px;
