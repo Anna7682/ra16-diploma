@@ -1,4 +1,3 @@
-html,
 body {
   font-family: Open Sans, arial, sans-serif;
   font-size: 1.5vw;
