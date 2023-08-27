@@ -1,9 +1,3 @@
-body {
-  font-family: Open Sans, arial, sans-serif;
-  font-size: 1.5vw;
-  height: 100%;
-  background-color: lightgray;
-}
 
 .visually-hidden {
   width: 1px;
